@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="exam" class="entity.NewlecExam"
+        p:kor="10"
+        p:eng="30"
+        p:math="29"
+        p:com="38"/>
+
+<!--    <bean id="exam" class="entity.NewlecExam">-->
+<!--        <constructor-arg name="kor" value="33" />-->
+<!--        <constructor-arg name="eng" value="12" />-->
+<!--        <constructor-arg name="math" value="10" />-->
+<!--        <constructor-arg name="com" value="40" />-->
+<!--    </bean>-->
+
+<!--    <bean id="exam" class="entity.NewlecExam">-->
+<!--        <property name="kor" value="28" />-->
+<!--        <property name="eng" value="228" />-->
+<!--        <property name="math" value="228" />-->
+<!--        <property name="com" value="28" />-->
+<!--    </bean>-->
+
+    <bean id="console" class="ui.GridConsole">
+        <property name="exam" ref="exam" />
+    </bean>
+
+    <util:list id="exams" list-class="java.util.ArrayList">
+        <bean class="entity.NewlecExam"
+              p:kor="19"
+              p:eng="237"
+              p:math="22"
+              p:com="13"/>
+        <ref bean="exam"></ref>
+    </util:list>
+</beans>
