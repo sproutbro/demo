@@ -1,3 +1,3 @@
-# demo
+# Spring xml
 
-갑자기 스프링 공부가 다시하고싶었음ㅋㅋ
+YouTube Newlec Spring 강의 자료
